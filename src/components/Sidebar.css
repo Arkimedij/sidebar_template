@@ -15,3 +15,18 @@ main{
     background-color: black;
     height: 100vh;
 }
+.top_section{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    padding: 15px 10px;
+    
+}
+.logo{
+    font-size: 5rem;
+}
+.bars{
+    font-size: 2rem;
+
+}

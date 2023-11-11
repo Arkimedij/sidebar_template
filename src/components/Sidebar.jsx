@@ -4,7 +4,7 @@ import '../components/Sidebar.css';
 import {FaHome}from 'react-icons/fa'
 import {MdSportsCricket,MdLogoDev} from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
-import {FaNoteSticky} from 'react-icons/fa6';
+import {FaNoteSticky,FaBars} from 'react-icons/fa6';
 import {TiTick} from 'react-icons/ti'
 
 function Sidebar({children}) {
@@ -41,6 +41,7 @@ function Sidebar({children}) {
                     <MdLogoDev/>
                 </h1>
                 <div className='bars'>
+                    <FaBars/>
                 </div>
 
 

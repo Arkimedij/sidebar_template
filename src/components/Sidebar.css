@@ -67,6 +67,7 @@ main{
     font-size: 2rem;
     transition: all 1s;
     cursor: pointer;
+    padding: 1rem;
     
     justify-content: center;
     transition: 1s ease-in;

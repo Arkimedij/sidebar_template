@@ -6,7 +6,7 @@
     
     background-color: black;
     width: 100px;
-    height: 100vh;
+    
     
     color: white;
     display: flex;
@@ -24,9 +24,18 @@
 }
 
 .sidebar{
+    
     color: white;
     background-color: black;
-    width: 100px;
+    height: 100vh;
+    
+    
+}
+.main2{
+    margin: 0 auto;
+    color: red;
+    padding: 10px;
+    margin-left: calc();
 }
 main{
     width: 100px;
@@ -41,7 +50,7 @@ main{
     justify-content: center;
     gap: 1rem;
     align-items: center;
-    padding: 15px 10px;
+    padding: 15px 25px;
     
 }
 .logo{
@@ -58,6 +67,10 @@ main{
     font-size: 2rem;
     transition: all 1s;
     cursor: pointer;
+    
+    justify-content: center;
+    transition: 1s ease-in;
+    
 
 }
 .bars:hover{
@@ -85,6 +98,7 @@ main{
     align-items: center;
     color: white;
     text-decoration: none;
+    border-right: 4px solid transparent;
     gap: 2rem;
     
 }
@@ -122,7 +136,7 @@ main{
     display: none;
 }
 .small-logo{
-    opacity: 0;
+    display: none;
 }
 .cricket-container{
     display: flex;

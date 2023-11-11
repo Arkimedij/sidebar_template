@@ -38,11 +38,15 @@ function Sidebar({children}) {
         setIsOpen(!isOpen);
     }
   return (
-    <div className='contain'>
+    <>
     
     <div className='main-container'>
         
-        <motion.div animate={{width:isOpen ?"200px":"45px"}} className='sidebar'>
+        <motion.div animate={{width:isOpen ?"200px":"105px",transition: {
+              duration: 0.5,
+              type: "spring",
+              damping: 15,
+            },}} className='sidebar'>
             <div className='top_section'>
                 <h1 className={isOpen?"logo":"small-logo"}>
                     <MdLogoDev/>
@@ -70,16 +74,17 @@ function Sidebar({children}) {
                     ))}
 
                 </section>
+                
             </main>
+            
 
         </motion.div>
+        <div className='main2'>{children}</div>
+
         
     </div>
-    <div className='content'>
-        {children}
     
-    </div>
-    </div>
+    </>
   )
 }
 

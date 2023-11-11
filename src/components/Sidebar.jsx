@@ -49,11 +49,21 @@ function Sidebar({children}) {
             },}} className='sidebar'>
             <div className='top_section'>
                 <h1 className={isOpen?"logo":"small-logo"}>
-                    <MdLogoDev/>
+                    <NavLink to="/" className='linktohome'><MdLogoDev/></NavLink>
                 </h1>
+                <motion.div animate={{width:"100px"
+                ,transition: {
+              duration: 0.5,
+              type: "spring",
+              damping: 10,
+            },
+            }}
+
+            >
                 <div className='bars'>
                     <FaBars onClick={toggle}/>
                 </div>
+                </motion.div>
 
 
             </div>

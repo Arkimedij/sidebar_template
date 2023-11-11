@@ -102,6 +102,9 @@ main{
     gap: 2rem;
     
 }
+.linktohome{
+    color: wheat;
+}
 .icon{
     display: flex;
     justify-content: center;

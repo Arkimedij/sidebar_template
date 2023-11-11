@@ -1,8 +1,9 @@
 import React from 'react'
+import '../components/Sidebar.css';
 
 function Cricket() {
   return (
-    <div>Cricket</div>
+    <div className='cricket-container'>Cricket</div>
   )
 }
 

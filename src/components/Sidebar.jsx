@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {motion} from "framer-motion";
 import '../components/Sidebar.css';
 import {FaHome}from 'react-icons/fa'
@@ -33,15 +33,22 @@ function Sidebar({children}) {
         }
 
     ]
+    const[isOpen,setIsOpen]=useState(false);
+    const toggle=()=>{
+        setIsOpen(!isOpen);
+    }
   return (
+    <div className='contain'>
+    
     <div className='main-container'>
-        <motion.div animate={{width:"300px"}} className='sidebar'>
+        
+        <motion.div animate={{width:isOpen ?"200px":"45px"}} className='sidebar'>
             <div className='top_section'>
-                <h1 className='logo'>
+                <h1 className={isOpen?"logo":"small-logo"}>
                     <MdLogoDev/>
                 </h1>
                 <div className='bars'>
-                    <FaBars/>
+                    <FaBars onClick={toggle}/>
                 </div>
 
 
@@ -49,12 +56,12 @@ function Sidebar({children}) {
             <main>
                 <section className='routes'>
                     {routes.map((route)=>(
-                        <NavLink to={route.path} key={route.name}>
+                        <NavLink to={route.path} key={route.name} className='link' >
                             <div className='icon'>
                                 {route.icon}
 
                             </div>
-                            <div className='link_text'>
+                            <div className={isOpen?"link_text":"just_text"}>
                                 {route.name}
                             </div>
                         </NavLink>
@@ -66,6 +73,12 @@ function Sidebar({children}) {
             </main>
 
         </motion.div>
+        
+    </div>
+    <div className='content'>
+        {children}
+    
+    </div>
     </div>
   )
 }

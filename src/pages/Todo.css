@@ -3,9 +3,103 @@
 .todo-container{
     display: flex;
     flex-direction: column;
+    color: white;
     
     font-family: 'Poppins', sans-serif;
 }
+.stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    background-color: rgb(34, 37, 36);
+    border-radius: 10px;
+    padding-bottom: 1rem;
+
+}
+.stats-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.progress-status{
+    display: flex;
+    justify-content: flex-start;
+
+}
+.second-title{
+    color: black;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+
+}
 .title{
     color: black;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+.todos{
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*TodoConetent css*/
+.content-container{
+    display: flex;
+    width: 350px;
+    background-color: rgb(29, 28, 28);
+    height: 100px;
+    border-radius: 10px;
+
+}
+.data{
+    width: 100%;
+    display: flex;
+    padding-left: 1rem;
+    justify-content:space-between;
+    gap: 1rem;
+    align-items: center;
+}
+.tick-text{
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    
+    
+}
+.del{
+    fill: lightcoral;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 25px;
+    transition: 1s ease-in;
+}
+.del:hover{
+    fill: rgb(231, 82, 82);
+    transition: 1s ease-in;
+
+}
+.unticked{
+    font-size: 25px;
+}
+.ticked{
+    font-size: 25px;
+    fill: greenyellow;
+
+}
+.ongoing{
+
+}
+.completed{
+    transition: 1s ease-in;
+    text-decoration: line-through;
+    opacity: 50%;
 }

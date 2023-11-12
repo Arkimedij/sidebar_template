@@ -8,11 +8,11 @@ function TodoContent() {
     const tasks="Jack Off"
     const[checkbox,setCheckbox]=useState(false)
     const togglecheck=()=>{
-        if (checkbox==true){
+        if (checkbox===true){
             setCheckbox(false);
 
         }
-        else if (checkbox==false)
+        else if (checkbox===false)
         {
             setCheckbox(true);
 

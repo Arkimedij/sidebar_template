@@ -3,8 +3,25 @@ import '../pages/Todo.css'
 import TodoContent from './TodoContent'
 import {MdDownloading} from 'react-icons/md';
 import {FaPercent} from 'react-icons/fa';
+import { useState } from 'react';
 
 function Todo() {
+  const[tasks,setTasks]=useState([]);
+  const[taskName,setTaskName]=useState('');
+    function handleSubmit(e) {
+        e.preventDefault();
+        addTask(taskName);
+        setTaskName('');
+    }
+    function addTask(taskName) {
+      if(taskName==="") return alert('please enter task name');
+      setTasks(prev=>{
+          return [...prev,{name:taskName,done:false}];
+        });
+    }
+  
+
+  
   return (
     <div className='todo-container'>
       <div className='stats'>
@@ -22,11 +39,25 @@ function Todo() {
       </div>
       </div>
       <h1 className='title'>Main Goal</h1>
+      <form onSubmit={handleSubmit}>
+        <button>+</button>
+        <input type="text" 
+        value={taskName} 
+        onChange={(e)=>setTaskName(e.target.value)} placeholder='your next task'>
+
+        </input>
+      </form>
+      
+      
+
+
       <div className='todos'>
-        <TodoContent/>
-        <TodoContent/>
-        <TodoContent/>
-        <TodoContent/>
+        <TodoContent onAdd={addTask}/>
+        {tasks&&tasks.map((tasks,index)=>(
+        <TodoContent {...tasks}
+        />
+      ))}
+        
        
         
         

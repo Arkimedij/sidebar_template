@@ -27,7 +27,9 @@
     
     color: white;
     background-color: black;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    
     
     
 }
@@ -35,6 +37,8 @@
     margin: 0 auto;
     color: red;
     padding: 10px;
+    
+    overflow: auto;
     
 }
 main{

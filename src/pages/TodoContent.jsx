@@ -4,8 +4,9 @@ import {AiFillDelete} from 'react-icons/ai';
 import {BsCheckCircle,BsCheckCircleFill} from"react-icons/bs";
 
 
-function TodoContent() {
-    const tasks="Jack Off"
+function TodoContent({name,onTrash}) {
+    const empty = "empty"
+    
     const[checkbox,setCheckbox]=useState(false)
     const togglecheck=()=>{
         if (checkbox===true){
@@ -19,6 +20,7 @@ function TodoContent() {
         }
         
     }
+    
   return (
     <div className='content-container'>
         <div className='data'>
@@ -29,11 +31,12 @@ function TodoContent() {
             :
             <BsCheckCircleFill className='ticked'onClick={togglecheck}/>}
             <div className={(checkbox)?"ongoing":"completed"}>
-            {tasks}
+            
+            {name}
             </div>
             </div>
             
-            <AiFillDelete className='del'/>
+            <AiFillDelete className='del' onClick={onTrash} />
 
         </div>
     </div>

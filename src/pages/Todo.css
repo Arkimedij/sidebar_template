@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
     
     background-color: rgb(34, 37, 36);
     border-radius: 10px;

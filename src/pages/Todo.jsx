@@ -3,11 +3,26 @@ import '../pages/Todo.css'
 import TodoContent from './TodoContent'
 import {MdDownloading} from 'react-icons/md';
 import {FaPercent} from 'react-icons/fa';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 function Todo() {
   const[tasks,setTasks]=useState([]);
   const[taskName,setTaskName]=useState('');
+
+  useEffect(()=>{
+    if(tasks === null ||tasks.length===0 )return;
+    localStorage.setItem('tasks',JSON.stringify(tasks));
+  },[tasks]);
+
+  useEffect(()=>{
+    const tasks=JSON.parse(localStorage.getItem('tasks'));
+    
+    if (tasks !== null) {
+      setTasks(tasks);
+    }
+    
+  },[])
+
     function handleSubmit(e) {
         e.preventDefault();
         addTask(taskName);
@@ -16,9 +31,18 @@ function Todo() {
     function addTask(taskName) {
       if(taskName==="") return alert('please enter task name');
       setTasks(prev=>{
-          return [...prev,{name:taskName,done:false}];
+          return [...prev,{name:taskName,done:true}];
         });
     }
+    function removeTask(indexToRemove){
+      setTasks(prev=>{
+        return prev.filter((taskObject,index)=>{
+          
+          return index!==indexToRemove
+        });
+      });
+    }  
+    
   
 
   
@@ -52,9 +76,11 @@ function Todo() {
 
 
       <div className='todos'>
-        <TodoContent onAdd={addTask}/>
+        <TodoContent onAdd={addTask} name={setTaskName}/>
         {tasks&&tasks.map((tasks,index)=>(
         <TodoContent {...tasks}
+        
+        onTrash={()=>removeTask(index)}
         />
       ))}
         

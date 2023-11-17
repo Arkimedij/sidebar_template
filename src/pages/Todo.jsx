@@ -9,24 +9,31 @@ import { FaCheckCircle } from "react-icons/fa";
 
 
 function Todo() {
-  const[inputData,setInputData] = useState('');
+  const[inputData,setInputData] = useState([]);
   const[items,setItems] = useState([]);
   const addItem =()=>
   {
     if(!inputData) 
     {
+      
     }
     else
     {
       setItems([...items,inputData]);
       setInputData('');
+
     }
     
-    
-
-
   }
-  
+  const deleteItem =(index)=>{
+    const updateditems=items.filter((element,ind)=>{
+      return ind !== index;
+
+    })
+    setItems(updateditems);
+
+    
+  }
   
   return (
     <>
@@ -40,17 +47,28 @@ function Todo() {
           
           <div className='todo-container'>
             <input type='text' placeholder='Add todos' className='search' value={inputData} onChange={(e)=>setInputData(e.target.value)} />
-            <div className='add-button'><MdOutlineAddCircleOutline className='add-button-todo' onClick={addItem}/></div>
+            <div className='add-button'>
+            <MdOutlineAddCircleOutline className='add-button-todo' onClick={addItem}/>
+            </div>
             
           </div>
 
           <div className='show-items'>
-            <div className='each-item'>
-              <FaCheckCircle />
-              
-              <h4>Class</h4>
-              <AiFillDelete />
-            </div>
+            {
+              items.map((elem,index)=>{
+                return(
+                  <>
+                  <div className='each-item' key={index}>
+                    <FaCheckCircle />
+                    
+                    <h4>{elem}</h4>
+                    <AiFillDelete onClick={()=>deleteItem(index)}/>
+                  </div>
+                  </>
+                )
+              })
+            }
+            
           </div>
           
           

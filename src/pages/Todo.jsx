@@ -13,6 +13,15 @@ function Todo() {
   const[items,setItems] = useState([]);
   const addItem =()=>
   {
+    if(!inputData) 
+    {
+    }
+    else
+    {
+      setItems([...items,inputData]);
+      setInputData('');
+    }
+    
     
 
 

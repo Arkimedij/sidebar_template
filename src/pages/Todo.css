@@ -1,106 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-.todo-container{
+.main-div{
+    padding-top: 1rem;
     display: flex;
-    flex-direction: column;
-    color: white;
-    
-    font-family: 'Poppins', sans-serif;
-}
-.stats{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     width: 100%;
-    
-    background-color: rgb(34, 37, 36);
-    border-radius: 10px;
-    padding-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
 
 }
-.stats-container{
+.sub-main-div{
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.image-container{
+    text-align: center;
+}
+.image{
+    fill:white;
+    font-size: 5rem;
+    
+
+}
+/*Main container*/
+.todo-container{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.search{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 25px;
+    
+}
+.search:focus{
+    border: none;
+    outline: none;
+
+
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}
+:-moz-placeholder {
+    text-align: center;
+}
+input {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+.add-button-todo{
+    font-size: 24px;
+    transition: 0.5s ease-in;
+}
+.add-button-todo:hover{
+    cursor: pointer;
+    fill: greenyellow;
+    transition: 0.5s ease-in;
+    font-size: 24px;
+}
+.show-items{
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.each-item{
+    padding: 1rem;
+    width: 400px;
+    max-width:400px;
+    max-height: 50px;
+    border: 1px solid white;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 5rem;
-}
-.progress-status{
-    display: flex;
-    justify-content: flex-start;
-
-}
-.second-title{
-    color: black;
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-
-}
-.title{
-    color: black;
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-}
-.todos{
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-
-/*TodoConetent css*/
-.content-container{
-    display: flex;
-    width: 350px;
-    background-color: rgb(29, 28, 28);
-    height: 100px;
-    border-radius: 10px;
-
-}
-.data{
-    width: 100%;
-    display: flex;
-    padding-left: 1rem;
-    justify-content:space-between;
-    gap: 1rem;
     align-items: center;
-}
-.tick-text{
-    display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
+    flex-direction:row;
+    text-align: center;
     
-    
-}
-.del{
-    fill: lightcoral;
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
-    margin-right: 10px;
-    font-size: 25px;
-    transition: 1s ease-in;
-}
-.del:hover{
-    fill: rgb(231, 82, 82);
-    transition: 1s ease-in;
 
-}
-.unticked{
-    font-size: 25px;
-}
-.ticked{
-    font-size: 25px;
-    fill: greenyellow;
-
-}
-.ongoing{
-
-}
-.completed{
-    transition: 1s ease-in;
-    text-decoration: line-through;
-    opacity: 50%;
 }

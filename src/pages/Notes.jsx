@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { FaRegNoteSticky } from "react-icons/fa6";
 function Notes() {
   return (
-    <div>Notes</div>
+    <div className='note-container'>
+      <div className='note-sub-container'>
+        
+      </div>
+
+    </div>
   )
 }
 

@@ -146,3 +146,52 @@ h4{
     display: flex;
     justify-content: center;
 }
+.note{
+    display: flex;
+    flex-direction: column;
+}
+.note-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.note-footer-label{
+    width: 100%;
+    text-align: center;
+    font-style: oblique;
+    padding-top: 1rem;
+}
+textarea{
+    resize: none;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: center;
+    overflow-y: hidden;
+    border-radius: 10px;
+    transition: 0.5s ease-in;
+    
+}
+textarea:hover{
+    box-shadow: 4px 2px 5px rgb(128, 240, 128);
+    transition: 0.5s ease-in;
+}
+.button-container{
+    margin: 0 auto;
+    
+}
+.note-save{
+    
+    width: 50px;
+    font-weight: 500;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transition: 0.3s ease-in;
+    font-family: 'Poppins', sans-serif;
+}
+.note-save:hover{
+    background-color: rgb(128, 240, 128);
+    transition: 0.3s ease-in;
+}

@@ -19,15 +19,19 @@ function Notes() {
       <div className='note-sub-container'>
         <div className='note'>
           <textarea
-            cols={15}
+            cols={45}
             rows={7}
-            maxLength={100}
-            onChange={saveHandler}
+            maxLength={260}
+            onChange={(e)=>saveHandler(e.target.value)}
             placeholder='Type...'
             ></textarea>
             <div className='note-footer'>
               <span className='note-footer-label'>{} Characters left</span>
-              <button className='note-save'>Save</button>
+              <div className='button-container'>
+              <button className='note-save' onClick={saveHandler}>Save</button>
+
+              </div>
+              
             </div>
         </div>
 

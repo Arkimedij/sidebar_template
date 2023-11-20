@@ -115,3 +115,34 @@ h4{
     max-width: 300px;
     
 }
+/*Notes Css**/
+.note-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+.logo-note{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+}
+.note-logo{
+    display: flex;
+    font-size: 4rem;
+    justify-content: center;
+}
+.sub-title-note{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+.note-sub-container{
+    display: flex;
+    justify-content: center;
+}

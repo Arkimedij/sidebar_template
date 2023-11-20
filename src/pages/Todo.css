@@ -31,6 +31,7 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    
 }
 .search{
     outline: none;
@@ -89,6 +90,28 @@ input {
     align-items: center;
     flex-direction:row;
     text-align: center;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+ 
     
 
+}
+.checked{
+    fill: rgb(149, 255, 149);
+    text-decoration: line-through;
+    opacity: 20%;
+}
+.unchecked{
+    fill: rgb(255, 255, 255);
+}
+.true{
+    text-decoration: line-through;
+    font-size: 40px;
+}
+h4{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+    
 }

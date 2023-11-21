@@ -115,6 +115,13 @@ h4{
     max-width: 300px;
     
 }
+.delete-button-todo{
+    transition: 0.3s ease-in;
+}
+.delete-button-todo:hover{
+    fill: lightcoral;
+    transition: 0.3s ease-in;
+}
 /*Notes Css**/
 .note-container{
     display: flex;

@@ -84,7 +84,7 @@ function Todo() {
                   onClick={() => toggleDone(index)}
                 />
                 <h4 className={elem.done ? 'checked' : 'unchecked'}>{elem.text}</h4>
-                <AiFillDelete onClick={() => deleteItem(index)} />
+                <AiFillDelete className='delete-button-todo' onClick={() => deleteItem(index)} />
               </div>
             ))}
           </div>

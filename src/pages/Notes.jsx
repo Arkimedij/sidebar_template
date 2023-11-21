@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid';
 function Notes() {
   const [inputText, setInputText] = useState('');
   const [notes, setNotes] = useState([]);
-  const char = 260;
+  const char = 200;
   const charLimit = char - inputText.length;
 
   const saveHandler = (value) => {
@@ -47,7 +47,7 @@ function Notes() {
           <textarea
             cols={45}
             rows={7}
-            maxLength={260}
+            maxLength={200}
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             placeholder="Type..."
@@ -72,12 +72,12 @@ function Notes() {
               
               <div className="note-sub-container-data"key={note.id}>
                     <div className="note">
-                      <div className='textarea'>{note.text}</div>
+                      <div className='textarea'><p>{note.text}</p></div>
                       
                       <div className="note-footer">
-                        <span className="note-footer-label">{charLimit} Characters left</span>
+                        
                         <div className="button-container">
-                        <button onClick={() => deleteHandler(note.id)}>Delete</button>
+                        <button className='note-delete' onClick={() => deleteHandler(note.id)}>Delete</button>
                         </div>
                       </div>
                     </div>

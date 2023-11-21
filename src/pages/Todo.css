@@ -225,7 +225,29 @@ textarea{
     display: flex;
     justify-content: center;
     text-align: center;
-    
+    width:auto;
+    overflow: hidden;
+    max-width: 350px;
+    max-height: 130px;
+    height: 130px;
     text-wrap: wrap;
     
+}
+.note-delete{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.3rem;
+    transition: 0.3s ease-in;
+    font-weight: 500;
+}
+.note-delete:hover{
+    background-color: rgba(250, 102, 102, 0.781);
+    transition: 0.3s ease-in;
+}
+.textarea p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

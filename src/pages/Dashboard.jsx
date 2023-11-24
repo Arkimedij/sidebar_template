@@ -10,7 +10,7 @@ function Dashboard() {
   const [category,setCategory]=useState("general");
 
   useEffect(()=>{
-    fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=e66ae99e31484942a9af6db074926a23`)
+    fetch(`https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=e66ae99e31484942a9af6db074926a23`)
     .then(res=>res.json())
     .then(data=>setItems(data.articles))
   },[category])

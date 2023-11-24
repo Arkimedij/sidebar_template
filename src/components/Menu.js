@@ -2,7 +2,8 @@ import React from 'react'
 
 function Menu({active ,setActive,setCategory}) {
   const links=[
-    {id:2, name:"Technology",value:"technology"},
+    {id:1, name:'General',value:'general'},
+    {id:1, name:"Technology",value:"technology"},
     {id:1, name:"Sports",value:"sports"},
     
   ];

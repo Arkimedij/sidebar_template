@@ -111,8 +111,26 @@
     border-radius: 8px 8px 0 0;
   }
   
+  .article-details {
+    margin-top: auto; /* Align at the bottom */
+  }
+  
   .article p {
     line-height: 25px;
     color: #555;
+  }
+  .article-title {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 45ch;
+        
+        text-overflow: ellipsis;
+        
+  }
+  h2{
+        max-width: 45ch;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
   }
   
